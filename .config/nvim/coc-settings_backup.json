@@ -1,0 +1,9 @@
+{
+  "css.validate": true,
+  "html.validate": true,
+  "javascript.validate": true,
+  "typescript.validate": true,
+  "css.colorDecorators.enable": true,
+  "html.format.enable": true
+}
+
