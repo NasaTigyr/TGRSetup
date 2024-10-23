@@ -11,6 +11,8 @@ set termguicolors
 
 set nobackup 
 
+highlight Comment cterm=NONE ctermfg=grey guifg=#808080
+
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 nnoremap <silent> <LEFT> :vertical resize -2 <CR>
@@ -64,12 +66,12 @@ vnoremap pp "+p
 
 "this is the tmux navigator settings, so that ou can use ctrl + h/j/k/l to
 "move.
-nnoremap <silent> <C-h> <Cmd>NvimTmuxNavigateLeft<CR>
-nnoremap <silent> <C-j> <Cmd>NvimTmuxNavigateDown<CR>
-nnoremap <silent> <C-k> <Cmd>NvimTmuxNavigateUp<CR>
-nnoremap <silent> <C-l> <Cmd>NvimTmuxNavigateRight<CR>
-nnoremap <silent> <C-\> <Cmd>NvimTmuxNavigateLastActive<CR>
-nnoremap <silent> <C-Space> <Cmd>NvimTmuxNavigateNext<CR>
+"nnoremap <silent> <C-h> <Cmd>NvimTmuxNavigateLeft<CR>
+"nnoremap <silent> <C-j> <Cmd>NvimTmuxNavigateDown<CR>
+"nnoremap <silent> <C-k> <Cmd>NvimTmuxNavigateUp<CR>
+"nnoremap <silent> <C-l> <Cmd>NvimTmuxNavigateRight<CR>
+"nnoremap <silent> <C-\> <Cmd>NvimTmuxNavigateLastActive<CR>
+"nnoremap <silent> <C-Space> <Cmd>NvimTmuxNavigateNext<CR>
 
 call plug#begin('~/.local/share/nvim/plugged')
 "kolev plugs to try
@@ -88,38 +90,22 @@ Plug 'pangloss/vim-javascript'
 
 Plug 'ThePrimeagen/vim-be-good'
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-"some colorschemes
-Plug 'folke/tokyonight.nvim'
-Plug 'sainnhe/everforest'
-Plug 'diegoulloao/neofusion.nvim'
-Plug 'shaunsingh/solarized.nvim'
-Plug 'rebelot/kanagawa.nvim'
-Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
-
 " Add colorizer to highlight CSS/HTML colors
 Plug 'norcalli/nvim-colorizer.lua'
 
 " this is to make that we can use ctrl + hjkl to move between tmux panes
-Plug 'alexghergh/nvim-tmux-navigation'
+Plug 'christoomey/vim-tmux-navigator'
 
-" Set up a tree file viewer
-"Plug 'nvim-tree/nvim-web-devicons' " optional
-"Plug 'nvim-tree/nvim-tree.lua'
+"this is somethnig that can handle better comments inside tmux
+Plug 'morhetz/gruvbox'
+" Using Vim-Plug
+Plug 'navarasu/onedark.nvim'
+
 
 call plug#end()
 lua require'colorizer'.setup()
 
-" colorscheme nordic
-" colorscheme kanagawa-wave " chill
-" colorscheme kanagawa-lotus " light
-" colorscheme kanagawa-dragon " dark
- colorscheme tokyonight
-" colorscheme neofusion
-
- Plug 'sangdol/mintabline.vim'
-
+  colorscheme gruvbox
 
 command! CreateHtmlFile call CreateHtmlTemplate()
 function! CreateHtmlTemplate()
