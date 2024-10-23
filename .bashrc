@@ -8,8 +8,8 @@ set -o vi
 #this makes ranger open with neovim!!!
 export EDITOR=nvim
 export VISUAL=nvim
-
-
+export TERM='xterm-direct'
+export TERM=rxvt-256color
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;

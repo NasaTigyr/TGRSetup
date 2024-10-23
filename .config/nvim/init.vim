@@ -62,6 +62,15 @@ vnoremap yp "+y
 nnoremap pp "+p
 vnoremap pp "+p
 
+"this is the tmux navigator settings, so that ou can use ctrl + h/j/k/l to
+"move.
+nnoremap <silent> <C-h> <Cmd>NvimTmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> <Cmd>NvimTmuxNavigateDown<CR>
+nnoremap <silent> <C-k> <Cmd>NvimTmuxNavigateUp<CR>
+nnoremap <silent> <C-l> <Cmd>NvimTmuxNavigateRight<CR>
+nnoremap <silent> <C-\> <Cmd>NvimTmuxNavigateLastActive<CR>
+nnoremap <silent> <C-Space> <Cmd>NvimTmuxNavigateNext<CR>
+
 call plug#begin('~/.local/share/nvim/plugged')
 "kolev plugs to try
 Plug 'sangdol/mintabline.vim'
@@ -91,6 +100,9 @@ Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 
 " Add colorizer to highlight CSS/HTML colors
 Plug 'norcalli/nvim-colorizer.lua'
+
+" this is to make that we can use ctrl + hjkl to move between tmux panes
+Plug 'alexghergh/nvim-tmux-navigation'
 
 " Set up a tree file viewer
 "Plug 'nvim-tree/nvim-web-devicons' " optional
