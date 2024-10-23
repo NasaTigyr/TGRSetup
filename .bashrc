@@ -5,6 +5,11 @@
 #This allows using the vim motions in the bashcommand line!!!
 set -o vi
 
+#this makes ranger open with neovim!!!
+export EDITOR=nvim
+export VISUAL=nvim
+
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
