@@ -2,3 +2,4 @@ Read this.
 I have created this directory with the idea to put vim motions into tmux. I have already activated vi motions in bash, so this is the next step. 
 You have to set the source at the end of copying this, so make sure to do that or else this won't have effect.
 tmux source-file ~/.config/tmux/tmux.conf
+
