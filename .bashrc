@@ -133,6 +133,8 @@ alias bashdoc='cd /usr/share/doc/bash && ls'
 #alias pbcopy='xsel --clipboard --input'
 alias jrun='/home/user1/jrun-bash-script/runjava.sh'
 
+alias crun='/home/user1/jrun-bash-script/runc.sh'
+
 bind 'TAB:menu-complete'
 
 pbcopy() {
@@ -146,4 +148,5 @@ pbcopy() {
     echo "wrong command: you meant pbcopy or pbcopy -c"
   fi
 }
+
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
