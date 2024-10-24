@@ -64,18 +64,11 @@ vnoremap yp "+y
 nnoremap pp "+p
 vnoremap pp "+p
 
-"this is the tmux navigator settings, so that ou can use ctrl + h/j/k/l to
-"move.
-"nnoremap <silent> <C-h> <Cmd>NvimTmuxNavigateLeft<CR>
-"nnoremap <silent> <C-j> <Cmd>NvimTmuxNavigateDown<CR>
-"nnoremap <silent> <C-k> <Cmd>NvimTmuxNavigateUp<CR>
-"nnoremap <silent> <C-l> <Cmd>NvimTmuxNavigateRight<CR>
-"nnoremap <silent> <C-\> <Cmd>NvimTmuxNavigateLastActive<CR>
-"nnoremap <silent> <C-Space> <Cmd>NvimTmuxNavigateNext<CR>
 
 call plug#begin('~/.local/share/nvim/plugged')
 "kolev plugs to try
 Plug 'sangdol/mintabline.vim'
+
 Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'sangdol/mintabline.vim'
@@ -88,7 +81,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'pangloss/vim-javascript'
 
+"Practice vim motions
 Plug 'ThePrimeagen/vim-be-good'
+
+" Syntax coloring 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Add colorizer to highlight CSS/HTML colors
 Plug 'norcalli/nvim-colorizer.lua'
@@ -101,11 +98,20 @@ Plug 'morhetz/gruvbox'
 " Using Vim-Plug
 Plug 'navarasu/onedark.nvim'
 
+"colorschemes to play around with
+Plug 'folke/tokyonight.nvim'
+Plug 'sainnhe/everforest'
+Plug 'diegoulloao/neofusion.nvim'
+Plug 'shaunsingh/solarized.nvim'
+Plug 'rebelot/kanagawa.nvim'
+
+
 
 call plug#end()
 lua require'colorizer'.setup()
 
-  colorscheme gruvbox
+"  colorscheme gruvbox
+  colorscheme onedark
 
 command! CreateHtmlFile call CreateHtmlTemplate()
 function! CreateHtmlTemplate()
