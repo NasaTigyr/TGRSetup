@@ -110,8 +110,8 @@ Plug 'rebelot/kanagawa.nvim'
 call plug#end()
 lua require'colorizer'.setup()
 
-"  colorscheme gruvbox
-  colorscheme onedark
+  colorscheme gruvbox
+"  colorscheme neofusion
 
 command! CreateHtmlFile call CreateHtmlTemplate()
 function! CreateHtmlTemplate()
